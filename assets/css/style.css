@@ -1,41 +1,49 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-
-div {
+.accordion {
+    background-color: #300060;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    outline: none;
     cursor: pointer;
+    transition: 1s;
+    color: #fff;
+    margin: 1px 0;
+    font-size: 18px;
 }
 
-/* static menu icon with html and css */
-.menu-icon-static div {
-    width: 35px;
-    height: 5px;
-    margin: 6px 0;
-    background-color: #000;
+.active, .accordion:hover {
+    background-color: #3000b0;
 }
 
-/* animated menu icon with html and css */
-.menu-icon-animate {
-    display: inline-block;
+.accordion::after {
+    content: "\02795";
+    float: right;
+    font-size: 12px;
 }
 
-.menu-icon-animate div {
-    width: 35px;
-    height: 5px;
-    margin: 5px 0;
-    background-color: #000;
-    transition: 0.5s;
+.active::after {
+    content: "\02796";
+    font-size: 18px;
 }
 
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+.panel::before {
+    content: "";
+    display: table;
+    clear: both;
 }
-
-.change .bar2 {
-    opacity: 0;
+.panel {
+    display: none;
+    overflow: hidden;
+    background-color: #fafafa;
+    padding: 0 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid #666;
+    border-top: none;
+    margin-bottom: 2px;
 }
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -6px);
-    transform: rotate(45deg) translate(-8px, -6px);
-}
-
