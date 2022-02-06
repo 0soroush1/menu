@@ -23,7 +23,7 @@
 .accordion::after {
     content: "\02795";
     float: right;
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .active::after {
@@ -36,14 +36,16 @@
     display: table;
     clear: both;
 }
+
 .panel {
-    display: none;
-    overflow: hidden;
-    background-color: #fafafa;
+    max-height: 0;
     padding: 0 15px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border: 1px solid #666;
+    overflow: hidden;
     border-top: none;
     margin-bottom: 2px;
+    border: 1px solid #666;
+    background-color: #fafafa;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: max-height 0.5s ease-out;
 }
