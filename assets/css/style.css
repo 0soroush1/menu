@@ -1,51 +1,41 @@
-body {
-    margin: 0;
+
+
+div {
+    cursor: pointer;
 }
 
-/* horizontal menu */
-.icon-bar-horizontal {
-    width: 100%;
-    overflow: auto; /* or hidden */
-    background-color: #666;
-    margin-bottom: 10px;
-}
-
-.icon-bar-horizontal a {
-    float: left;
-    color: #fff;
-    font-size: 2rem; /* 2rem = 2 * 16px(default) => 32px */
-    padding:1rem ; /* 1rem = 1 * 16px(default) => 16px */
-}
-
-.icon-bar-horizontal::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* vertical menu */
-
-.icon-bar-vertical {
-    width: 75px;
-    height: auto;
-    background-color: #666;
-
-}
-
-.icon-bar-vertical a {
-    display: block;
-    color: #fff;
-    font-size: 2rem; /* 2rem = 2 * 16px(default) => 32px */
-    padding:1rem ; /* 1rem = 1 * 16px(default) => 16px */
-    text-align: center;
-}
-
-
-/* both class icon-bar- (horizontal and vertical) */
-[class^=icon-bar-] a:hover {
+/* static menu icon with html and css */
+.menu-icon-static div {
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
     background-color: #000;
 }
 
-.active {
-    background-color: #00a900;
+/* animated menu icon with html and css */
+.menu-icon-animate {
+    display: inline-block;
 }
+
+.menu-icon-animate div {
+    width: 35px;
+    height: 5px;
+    margin: 5px 0;
+    background-color: #000;
+    transition: 0.5s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -6px);
+    transform: rotate(45deg) translate(-8px, -6px);
+}
+
